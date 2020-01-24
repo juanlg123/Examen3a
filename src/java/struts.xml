@@ -1,0 +1,44 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <include file="example.xml"/>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+    </package>
+    
+     <package name="controller" namespace="/" extends="struts-default">
+        <action name="formcrearidat" 
+                class="controller.EmpleadosController" 
+                method="registrar">
+            <result name="success">form_registrar.jsp</result>
+        </action>
+        
+        <action name="registrarempleado" 
+                class="controller.EmpleadosController" 
+                method="registrarEmpleado">
+            <result name="success">form_registrar.jsp</result>
+        </action>
+        
+        
+        <action name="formactualizar" 
+                class="controller.EmpleadosController" 
+                method="actualizar">
+            <result name="success">form_actualizar.jsp</result>
+        </action>
+        
+        <action name="actualizarempleado" 
+                class="controller.EmpleadosController" 
+                method="actualizarEmpleado">
+            <result name="success">form_actualizar.jsp</result>
+        </action>
+        
+        <action name="listarempleado" 
+                class="controller.EmpleadosController" 
+                method="listarempleado">
+            <result name="success">index.jsp</result>
+        </action>
+        
+    </package>
+</struts>
